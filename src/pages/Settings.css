@@ -1,0 +1,75 @@
+.settings-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 32px 64px;
+  text-align: center;
+}
+
+.settings-header h1 {
+  margin: 0 0 8px;
+  font-size: 40px;
+}
+
+.settings-header p {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.settings-preview {
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: var(--code-bg);
+}
+
+.settings-preview h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.settings-preview dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-preview dl > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px;
+}
+
+.settings-preview dt {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.settings-preview dd {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-h);
+}
+
+@media (max-width: 1024px) {
+  .settings-page {
+    padding: 32px 20px 48px;
+    gap: 24px;
+  }
+
+  .settings-header h1 {
+    font-size: 32px;
+  }
+
+  .settings-preview dl > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
