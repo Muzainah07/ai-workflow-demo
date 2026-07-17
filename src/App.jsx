@@ -2,13 +2,39 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Settings from './pages/Settings'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [activeView, setActiveView] = useState('home')
+
+  if (activeView === 'settings') {
+    return (
+      <>
+        <nav className="app-nav" aria-label="Main">
+          <button type="button" onClick={() => setActiveView('home')}>
+            Home
+          </button>
+          <button type="button" aria-current="page">
+            Settings
+          </button>
+        </nav>
+        <Settings />
+      </>
+    )
+  }
 
   return (
     <>
+      <nav className="app-nav" aria-label="Main">
+        <button type="button" aria-current="page">
+          Home
+        </button>
+        <button type="button" onClick={() => setActiveView('settings')}>
+          Settings
+        </button>
+      </nav>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />

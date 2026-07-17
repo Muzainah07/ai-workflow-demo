@@ -1,0 +1,24 @@
+.settings-page {
+  flex: 1;
+  padding: 48px 24px 64px;
+  text-align: center;
+}
+
+.settings-page__header {
+  margin-bottom: 32px;
+}
+
+.settings-page__header h1 {
+  margin-bottom: 12px;
+}
+
+.settings-page__header p {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .settings-page {
+    padding: 32px 16px 48px;
+  }
+}
